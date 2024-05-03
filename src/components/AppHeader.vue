@@ -53,7 +53,7 @@ export default {
     <header class="header-dc">
     <div class="header-logo">
       <img
-        src="../assets/img/dc-logo.png"
+        src="/img/dc-logo.png"
         alt="Logo della Dc"
       />
     </div>
@@ -71,6 +71,10 @@ export default {
 
   .header-logo {
     text-align: center;
+  }
+
+  .navigation {
+    @include flex(row, space-between, center);
   }
 
   .header-dc {
