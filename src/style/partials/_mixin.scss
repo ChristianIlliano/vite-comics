@@ -4,3 +4,11 @@
     justify-content: $justify-content;
     align-items: $align-items;
   }
+
+  @mixin flex-wrap($direction, $justify-content, $align-items, $flex-wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+  }

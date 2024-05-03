@@ -2,7 +2,8 @@
 export default {
     props: {
         cardImage: String,
-        cardTitle: String
+        cardTitle: String,
+        cardPrice: String
     }
 };
 
@@ -14,6 +15,7 @@ export default {
     :src="cardImage"
     :alt="cardTitle">
     <h4>{{cardTitle}}</h4>
+    <h6>{{cardPrice}}</h6>
 </div>
 </template>
 

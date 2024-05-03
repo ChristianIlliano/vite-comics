@@ -113,8 +113,10 @@ export default {
 <template>
   <header>
     <div class="b-bg">
-        <div class="content" v-for="comic in book">
-        <ProductCard :cardImage="comic.thumb" :cardTitle="comic.series"/>
+        <div class="container">
+        <div class="col" v-for="comic in book">
+        <ProductCard :cardImage="comic.thumb" :cardTitle="comic.series" :cardPrice="comic.price"/>
+        </div>
         </div>
     </div>
     <div class="blue-bg">
@@ -135,11 +137,19 @@ export default {
 @use "../style/partials/variables" as *;
 
 .b-bg {
-  @include flex(row, center, center);
-
+  @include flex-wrap(row, center, center, wrap);
     background-color: #1c1c1c;
     color: white;
     padding: 40px 0;
+    .container {
+      @include flex-wrap(row, center, center, wrap);
+      max-width: 70%;
+      .col {
+          width: calc(100% / 6);
+          margin: 0 auto;
+          padding: 20px;
+      }
+    }
 }
 
 .li-icon {
@@ -156,18 +166,17 @@ export default {
 }
 
 .content {
-
     max-width: 70%;
     margin: 0 auto;
     padding: 20px;
 }
 
+
 .navigation {
-    @include flex(row, center, center);
+  @include  flex(row, center, center);
     img {
       max-height: 150px;
     }
-
     gap: 40px; 
     font-size: 1.4rem;
 }
