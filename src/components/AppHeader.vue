@@ -73,9 +73,7 @@ export default {
     text-align: center;
   }
 
-  .navigation {
-    @include flex(row, space-between, center);
-  }
+  
 
   .header-dc {
     @include flex(row, space-between, center);

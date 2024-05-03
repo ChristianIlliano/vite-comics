@@ -2,6 +2,7 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
+import ProductCard from "./components/ProductCard.vue";
 export default {
   components: {
     AppHeader,
